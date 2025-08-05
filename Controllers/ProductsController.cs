@@ -1,8 +1,6 @@
-﻿using e_commerce_web_api.Data;
-using e_commerce_web_api.Models;
+﻿using e_commerce_web_api.Models;
 using e_commerce_web_api.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace e_commerce_web_api.Controllers
 {
@@ -59,7 +57,7 @@ namespace e_commerce_web_api.Controllers
                     return NotFound();
 
                 await _productService.UpdateProductAsync(product);
-                return NoContent();
+                return Ok(product);
             }
             catch (ArgumentException ex)
             {

@@ -28,7 +28,18 @@ namespace e_commerce_web_api.Services
         public async Task<Product?> GetProductByIdAsync(int id) =>
             await _repository.GetByIdAsync(id);
 
-        public async Task UpdateProductAsync(Product product) =>
-            await _repository.UpdateAsync(product);
+        public async Task UpdateProductAsync(Product product)
+        {
+            var existing = await _repository.GetByIdAsync(product.Id);
+            if (existing == null)
+                throw new ArgumentException("Product not found");
+
+            // Update only fields
+            existing.Name = product.Name;
+            existing.Price = product.Price;
+            existing.CategoryId = product.CategoryId;
+
+            await _repository.UpdateAsync(existing); // Pass tracked entity
+        }
     }
 }
