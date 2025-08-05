@@ -57,7 +57,7 @@ namespace e_commerce_web_api.Controllers
                     return NotFound();
 
                 await _productService.UpdateProductAsync(product);
-                return Ok(product);
+                return NoContent();
             }
             catch (ArgumentException ex)
             {
