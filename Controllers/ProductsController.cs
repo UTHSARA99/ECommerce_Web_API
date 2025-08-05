@@ -1,5 +1,6 @@
 ﻿using e_commerce_web_api.Data;
 using e_commerce_web_api.Models;
+using e_commerce_web_api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,28 +10,73 @@ namespace e_commerce_web_api.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly AppDbContext _appDbContext;
-        public ProductsController(AppDbContext appDbContext)
+        private readonly IProductService _productService;
+
+        public ProductsController(IProductService productService)
         {
-            _appDbContext = appDbContext;
+            _productService = productService;
         }
 
-
-        [HttpPost]
-        public async Task<IActionResult> AddProduct(Product product)
+        // GET: api/products
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Product>>> GetAll()
         {
-            _appDbContext.Products.Add(product);
-            await _appDbContext.SaveChangesAsync();
+            var products = await _productService.GetAllProductsAsync();
+            return Ok(products);
+        }
+
+        // GET: api/products/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Product>> GetById(int id)
+        {
+            var product = await _productService.GetProductByIdAsync(id);
+            if (product == null)
+                return NotFound();
 
             return Ok(product);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        // POST: api/products
+        [HttpPost]
+        public async Task<ActionResult<Product>> Create(Product product)
         {
-            var products = await _appDbContext.Products.ToListAsync();
+            await _productService.AddProductAsync(product);
+            return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
+            
+        }
 
-            return Ok(products);
+        // PUT: api/products/{id}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, Product product)
+        {
+            if (id != product.Id)
+                return BadRequest("Product ID mismatch");
+
+            try
+            {
+                var existing = await _productService.GetProductByIdAsync(id);
+                if (existing == null)
+                    return NotFound();
+
+                await _productService.UpdateProductAsync(product);
+                return NoContent();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // DELETE: api/products/{id}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var existing = await _productService.GetProductByIdAsync(id);
+            if (existing == null)
+                return NotFound();
+
+            await _productService.DeleteProductAsync(id);
+            return NoContent();
         }
 
     }

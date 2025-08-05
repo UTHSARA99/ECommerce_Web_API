@@ -1,4 +1,6 @@
-﻿namespace e_commerce_web_api.Models
+﻿using System.Text.Json.Serialization;
+
+namespace e_commerce_web_api.Models
 {
     public class Product
     {
@@ -7,7 +9,9 @@
         public decimal Price { get; set; }
 
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        
+        [JsonIgnore]
+        public Category? Category { get; set; }
 
     }
 }
