@@ -27,15 +27,8 @@ namespace e_commerce_web_api.Services
             if (hasProducts)
                 throw new InvalidOperationException("Cannot delete category because it has associated products.");
 
-            try
-            {
-                await _categoryRepository.DeleteAsync(category);
-            }
-            catch (DbUpdateException e)
-            {
-                // This means, there are related products
-                throw new InvalidOperationException("Cannot delete category because it is associated with one or more products.", e);
-            }
+            await _categoryRepository.DeleteAsync(category);
+   
         }
 
         public async Task<IEnumerable<Category>> GetAllCategoriesAsync()

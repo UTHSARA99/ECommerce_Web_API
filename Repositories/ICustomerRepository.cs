@@ -4,12 +4,12 @@ namespace e_commerce_web_api.Repositories
 {
     public interface ICustomerRepository
     {
-        Task<IEnumerable<Customer>> GetAllCustomersAsync();
-        Task<Customer> GetCustomerByIdAsync(int id);
-        Task<Customer> CreateCustomerAsync(Customer customer);
-        Task<Customer> UpdateCustomerAsync(Customer customer);
-        Task<bool> DeleteCustomerAsync(int id);
-        Task<IEnumerable<Order>> GetOrdersByCustomerIdAsync(int customerId);
+        Task<IEnumerable<Customer>> GetAllAsync();
+        Task<Customer?> GetByIdAsync(int id);
+        Task<Customer> CreateAsync(Customer customer);
+        Task UpdateAsync(Customer customer);
+        Task<bool> CheckEmailAsync(string email, int? id);
+        Task DeleteAsync(Customer customer);
 
     }
 }

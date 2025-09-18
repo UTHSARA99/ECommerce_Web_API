@@ -1,4 +1,6 @@
-﻿namespace e_commerce_web_api.Models
+﻿using System.Text.Json.Serialization;
+
+namespace e_commerce_web_api.Models
 {
     public class Order
     {
@@ -6,8 +8,9 @@
         public DateTime OrderDate { get; set; }
 
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        [JsonIgnore]
+        public Customer? Customer { get; set; }
 
-        public ICollection<OrderItem> OrderItems {  get; set; } 
+        public ICollection<OrderItem> OrderItems {  get; set; }
     }
 }

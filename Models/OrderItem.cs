@@ -1,12 +1,16 @@
-﻿namespace e_commerce_web_api.Models
+﻿using System.Text.Json.Serialization;
+
+namespace e_commerce_web_api.Models
 {
     public class OrderItem
     {
         public int  OrderId { get; set; }
-        public Order Order { get; set; }
+        [JsonIgnore]
+        public Order? Order { get; set; }
         
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        [JsonIgnore]
+        public Product? Product { get; set; }
 
         public int Quantity { get; set; }
     }

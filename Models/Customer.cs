@@ -1,4 +1,7 @@
-﻿namespace e_commerce_web_api.Models
+﻿using System.Text.Json.Serialization;
+
+namespace e_commerce_web_api.Models
+
 {
     public class Customer
     {
@@ -6,6 +9,8 @@
         public string Name { get; set; }
         public string Email { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+
+        [JsonIgnore]
+        public ICollection<Order>? Orders { get; set; }
     }
 }
