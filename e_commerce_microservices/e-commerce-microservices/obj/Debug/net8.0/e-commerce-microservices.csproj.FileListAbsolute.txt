@@ -1,0 +1,9 @@
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.csproj.AssemblyReference.cache
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.AssemblyInfoInputs.cache
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.AssemblyInfo.cs
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.csproj.CoreCompileInputs.cache
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.sourcelink.json
