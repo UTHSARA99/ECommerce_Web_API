@@ -59,5 +59,86 @@ namespace e_commerce_web_api.Services.CouponAPI.Controllers
             }
             return _response;
         }
+
+        [HttpGet]
+        [Route("GetByCode/{code}")]
+        public ResponseDTO GetByCoded(string code)
+        {
+            try
+            {
+                Coupon couponObject = _dbContext.Coupons.FirstOrDefault(coupon => coupon.CouponCode.ToLower() == code.ToLower());
+
+                if (couponObject == null)
+                {
+                    _response.IsSuccess = false;
+                    _response.Message = $"No coupon found with code {code}";
+                }
+                _response.Result = _mapper.Map<CouponDTO>(couponObject);
+
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+
+        [HttpPost]
+        public ResponseDTO CreateCoupon(CouponDTO couponDto)
+        {
+            try
+            {
+                Coupon couponObject = _mapper.Map<Coupon>(couponDto);
+                _dbContext.Coupons.Add(couponObject);
+                _dbContext.SaveChanges();
+
+                _response.Result = _mapper.Map<CouponDTO>(couponObject);
+
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+
+        [HttpPut]
+        public ResponseDTO UpdateCoupon([FromBody] CouponDTO couponDto)
+        {
+            try
+            {
+                Coupon couponObject = _mapper.Map<Coupon>(couponDto);
+                _dbContext.Coupons.Update(couponObject);
+                _dbContext.SaveChanges();
+
+                _response.Result = _mapper.Map<CouponDTO>(couponObject);
+
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+
+        [HttpDelete]
+        public ResponseDTO DeleteCoupon(int couponId)
+        {
+            try
+            {
+                Coupon couponObject = _dbContext.Coupons.First(coupon => coupon.CouponId == couponId);
+                _dbContext.Coupons.Remove(couponObject);
+                _dbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
     }
 }

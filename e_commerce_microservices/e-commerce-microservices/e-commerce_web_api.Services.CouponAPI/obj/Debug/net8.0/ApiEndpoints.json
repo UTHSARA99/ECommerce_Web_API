@@ -21,6 +21,84 @@
   },
   {
     "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
+    "Method": "CreateCoupon",
+    "RelativePath": "api/CouponAPI",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "couponDto",
+        "Type": "e_commerce_web_api.Services.CouponAPI.Models.DTOs.CouponDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "e_commerce_web_api.Services.CouponAPI.Models.DTOs.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
+    "Method": "UpdateCoupon",
+    "RelativePath": "api/CouponAPI",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "couponDto",
+        "Type": "e_commerce_web_api.Services.CouponAPI.Models.DTOs.CouponDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "e_commerce_web_api.Services.CouponAPI.Models.DTOs.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
+    "Method": "DeleteCoupon",
+    "RelativePath": "api/CouponAPI",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "couponId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "e_commerce_web_api.Services.CouponAPI.Models.DTOs.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
     "Method": "GetById",
     "RelativePath": "api/CouponAPI/{id}",
     "HttpMethod": "GET",
@@ -30,6 +108,32 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "e_commerce_web_api.Services.CouponAPI.Models.DTOs.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
+    "Method": "GetByCoded",
+    "RelativePath": "api/CouponAPI/GetByCode/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

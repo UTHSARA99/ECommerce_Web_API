@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{9789
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{9C59699E-3E72-49D8-AD83-DEB962824B4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-commerce_web.Web", "e-commerce_web.Web\e-commerce_web.Web.csproj", "{E6A81220-A7EB-4E73-A8EE-538CC7D2C6EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{71F5E3CC-EA55-832E-7504-FA719C92238D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71F5E3CC-EA55-832E-7504-FA719C92238D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71F5E3CC-EA55-832E-7504-FA719C92238D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A81220-A7EB-4E73-A8EE-538CC7D2C6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A81220-A7EB-4E73-A8EE-538CC7D2C6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A81220-A7EB-4E73-A8EE-538CC7D2C6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A81220-A7EB-4E73-A8EE-538CC7D2C6EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{71F5E3CC-EA55-832E-7504-FA719C92238D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E6A81220-A7EB-4E73-A8EE-538CC7D2C6EE} = {D62E4A38-B0E8-422E-99F2-1DD93AF0D55E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78BC442D-99E9-46BD-85B8-43C9D83BEE80}
