@@ -7,3 +7,5 @@ C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-
 C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.sourcelink.json
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.RazorAssemblyInfo.cache
+C:\Users\Asel\Documents\.NET_Projects\e-commerce_web\e_commerce_microservices\e-commerce-microservices\obj\Debug\net8.0\e-commerce-microservices.RazorAssemblyInfo.cs

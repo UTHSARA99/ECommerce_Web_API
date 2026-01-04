@@ -2,7 +2,7 @@
 {
     public class StaticDetails
     {
-        public static string CouponAPIBase { get; set; } = "https://localhost:7001/api/coupons/";
+        public static string CouponAPIBase { get; set; } = "https://localhost:7001";
 
         public enum APIType
         {

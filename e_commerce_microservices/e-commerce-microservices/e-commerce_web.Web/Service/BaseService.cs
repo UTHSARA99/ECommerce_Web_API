@@ -16,7 +16,7 @@ namespace e_commerce_web.Web.Service
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<ResponseDTO> SendAsync<T>(RequestDTO requestDTO)
+        public async Task<ResponseDTO> SendAsync(RequestDTO requestDTO)
         {
             try
             {
@@ -24,6 +24,8 @@ namespace e_commerce_web.Web.Service
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "application/json");
                 // token
+
+                Console.WriteLine(requestDTO.URL.ToString());
 
                 message.RequestUri = new Uri(requestDTO.URL);
 

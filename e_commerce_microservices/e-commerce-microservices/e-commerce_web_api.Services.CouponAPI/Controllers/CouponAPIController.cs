@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace e_commerce_web_api.Services.CouponAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/coupon")]
     [ApiController]
     public class CouponAPIController : ControllerBase
     {
@@ -62,7 +62,7 @@ namespace e_commerce_web_api.Services.CouponAPI.Controllers
 
         [HttpGet]
         [Route("GetByCode/{code}")]
-        public ResponseDTO GetByCoded(string code)
+        public ResponseDTO GetByCode(string code)
         {
             try
             {
@@ -125,6 +125,7 @@ namespace e_commerce_web_api.Services.CouponAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("{couponId:int}")]
         public ResponseDTO DeleteCoupon(int couponId)
         {
             try

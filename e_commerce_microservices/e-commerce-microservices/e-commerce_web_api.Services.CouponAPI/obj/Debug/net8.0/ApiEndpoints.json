@@ -2,7 +2,7 @@
   {
     "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
     "Method": "Get",
-    "RelativePath": "api/CouponAPI",
+    "RelativePath": "api/coupon",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
     "Method": "CreateCoupon",
-    "RelativePath": "api/CouponAPI",
+    "RelativePath": "api/coupon",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -48,7 +48,7 @@
   {
     "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
     "Method": "UpdateCoupon",
-    "RelativePath": "api/CouponAPI",
+    "RelativePath": "api/coupon",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -74,7 +74,7 @@
   {
     "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
     "Method": "DeleteCoupon",
-    "RelativePath": "api/CouponAPI",
+    "RelativePath": "api/coupon/{couponId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -82,7 +82,7 @@
       {
         "Name": "couponId",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -100,7 +100,7 @@
   {
     "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
     "Method": "GetById",
-    "RelativePath": "api/CouponAPI/{id}",
+    "RelativePath": "api/coupon/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -125,8 +125,8 @@
   },
   {
     "ContainingType": "e_commerce_web_api.Services.CouponAPI.Controllers.CouponAPIController",
-    "Method": "GetByCoded",
-    "RelativePath": "api/CouponAPI/GetByCode/{code}",
+    "Method": "GetByCode",
+    "RelativePath": "api/coupon/GetByCode/{code}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
